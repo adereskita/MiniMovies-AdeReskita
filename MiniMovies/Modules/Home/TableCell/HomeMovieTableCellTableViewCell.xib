@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeMovieTableCellTableViewCell" rowHeight="297" id="KGk-i7-Jjw" customClass="HomeMovieTableCellTableViewCell" customModule="MiniMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="297"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="297"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fr-LD-DYd">
+                        <rect key="frame" x="16" y="16" width="42" height="25"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqE-2C-THl">
+                        <rect key="frame" x="257" y="13.666666666666664" width="47" height="30"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="See All"/>
+                    </button>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Qmp-pb-Xzd">
+                        <rect key="frame" x="0.0" y="57" width="320" height="240"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="240" id="7R4-tn-V3b"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y0A-Ik-IFe">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3fr-LD-DYd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ho4-iH-HWB"/>
+                    <constraint firstItem="FqE-2C-THl" firstAttribute="centerY" secondItem="3fr-LD-DYd" secondAttribute="centerY" id="JE9-Hj-3jT"/>
+                    <constraint firstAttribute="bottom" secondItem="Qmp-pb-Xzd" secondAttribute="bottom" id="L0y-h1-i3F"/>
+                    <constraint firstAttribute="trailing" secondItem="Qmp-pb-Xzd" secondAttribute="trailing" id="R0u-Ni-6b1"/>
+                    <constraint firstAttribute="trailing" secondItem="FqE-2C-THl" secondAttribute="trailing" constant="16" id="S5G-fX-Nv5"/>
+                    <constraint firstItem="FqE-2C-THl" firstAttribute="top" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="X4t-PJ-Cvh"/>
+                    <constraint firstItem="Qmp-pb-Xzd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="i5z-Ys-WRy"/>
+                    <constraint firstItem="Qmp-pb-Xzd" firstAttribute="top" secondItem="3fr-LD-DYd" secondAttribute="bottom" constant="16" id="tZr-Wu-Q5B"/>
+                    <constraint firstItem="3fr-LD-DYd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="xuq-ig-1GE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="buttonSeeAll" destination="FqE-2C-THl" id="QAh-Cr-TNY"/>
+                <outlet property="collectionViewGenre" destination="Qmp-pb-Xzd" id="Vin-qT-w83"/>
+                <outlet property="collectionViewHeightConstraint" destination="7R4-tn-V3b" id="GN7-IO-kW0"/>
+                <outlet property="genreTitleLabel" destination="3fr-LD-DYd" id="14U-fV-Zsa"/>
+            </connections>
+            <point key="canvasLocation" x="125.19083969465649" y="117.95774647887325"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

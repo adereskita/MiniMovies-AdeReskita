@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeMoviesCollectionViewCell" id="gTV-IL-0wX" customClass="HomeMoviesCollectionViewCell" customModule="MiniMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="165" height="197"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="165" height="197"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAT-X3-3FE">
+                        <rect key="frame" x="0.0" y="0.0" width="165" height="197"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B5O-Vv-aQR">
+                                <rect key="frame" x="0.0" y="0.0" width="165" height="197"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="B5O-Vv-aQR" secondAttribute="trailing" id="VfZ-BL-liU"/>
+                            <constraint firstAttribute="bottom" secondItem="B5O-Vv-aQR" secondAttribute="bottom" id="XRy-0s-H1Y"/>
+                            <constraint firstItem="B5O-Vv-aQR" firstAttribute="top" secondItem="qAT-X3-3FE" secondAttribute="top" id="ngO-Rv-ec9"/>
+                            <constraint firstItem="B5O-Vv-aQR" firstAttribute="leading" secondItem="qAT-X3-3FE" secondAttribute="leading" id="z2m-vs-ELb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="qAT-X3-3FE" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4ZQ-Bp-lEY"/>
+                <constraint firstAttribute="trailing" secondItem="qAT-X3-3FE" secondAttribute="trailing" id="HVu-RR-EUU"/>
+                <constraint firstItem="qAT-X3-3FE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jfG-8J-XFk"/>
+                <constraint firstItem="qAT-X3-3FE" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottom" id="meb-zm-KLP"/>
+            </constraints>
+            <size key="customSize" width="165" height="197"/>
+            <connections>
+                <outlet property="backgroundView" destination="qAT-X3-3FE" id="9ir-ee-Rky"/>
+                <outlet property="movieBackgroundView" destination="qAT-X3-3FE" id="pBC-zE-FFO"/>
+                <outlet property="movieImageView" destination="B5O-Vv-aQR" id="z9R-pU-FXo"/>
+            </connections>
+            <point key="canvasLocation" x="217.55725190839695" y="71.478873239436624"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
